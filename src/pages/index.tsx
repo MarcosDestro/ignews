@@ -1,5 +1,15 @@
+import Head from '../../node_modules/next/head'
+
 export default function Home() {
   return (
-    <h1>Hello World</h1>
+    <>
+      <Head>
+        <title>ig.news | Início</title>
+      </Head>
+
+      <h1>
+        Hello World
+      </h1>
+    </>
   )
 }
