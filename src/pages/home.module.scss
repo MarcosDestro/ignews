@@ -49,6 +49,11 @@
     .contentContainer {
         flex-direction: column;
         width: 100vw;
+        height: auto;
+
+        img {
+            margin-bottom: 2.5rem;
+        }
     }
 
     .hero {
@@ -61,4 +66,6 @@
             margin: 2.5rem auto;
         }
     }
+
+    
 }
