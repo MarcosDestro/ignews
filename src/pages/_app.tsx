@@ -1,6 +1,6 @@
 import '../styles/global.scss'
 
-import { AppProps } from '../../node_modules/next/app'
+import { AppProps } from 'next/app'
 import { Header } from '../components/Header/index'
 
 
