@@ -29,7 +29,12 @@ export default function Home({ product }: HomeProps) {
           
           <p>
             Get access to all the publications <br />
-            <span>for { product.amount } month</span>
+            <span>for {
+              new Intl.NumberFormat('en-US', {
+                style: 'currency',
+                currency: 'USD', 
+              }).format(product.amount/100)
+            } month</span>
           </p>
 
           <SubcribeButton priceId={product.priceId}/>
@@ -48,13 +53,8 @@ export const getStaticProps: GetStaticProps = async () => {
   // Monta o objeto
   const product = {
     priceId: price.id,
-    amount: new Intl.NumberFormat('en-US', {
-      style: 'currency',
-      currency: 'USD', 
-    }).format(price.unit_amount/100),
+    amount: price.unit_amount,
   }
-
-  
 
   return {
     props: {
